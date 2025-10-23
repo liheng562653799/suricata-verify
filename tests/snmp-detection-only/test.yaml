@@ -3,9 +3,12 @@ args:
 
 pcap: ../snmp-v2c-get/SNMPv2c_get_requests.pcap
 
+requires:
+  min-version: 8.0.0
+
 checks:
  - filter:
-     count: 0
+     count: 4
      match:
        event_type: flow
        app_proto: snmp
